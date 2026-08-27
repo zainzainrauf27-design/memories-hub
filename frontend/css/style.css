@@ -7,3 +7,9 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #071a33;
+  color: #ffffff;
+}
