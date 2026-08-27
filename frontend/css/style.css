@@ -19,3 +19,36 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
+#home-screen {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.home-content {
+  width: min(100%, 900px);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-content {
+  width: min(100%, 700px);
+  padding: 40px 24px;
+}
+
+.welcome-label {
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
