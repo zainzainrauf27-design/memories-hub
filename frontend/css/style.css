@@ -165,3 +165,43 @@ body {
     line-height: 1.6;
   }
   }
+
+.welcome-content h1 {
+  position: relative;
+  text-shadow:
+    0 0 12px rgba(100, 190, 255, 0.35),
+    0 0 35px rgba(40, 130, 255, 0.2);
+  animation: welcomePulse 5s ease-in-out infinite;
+}
+
+@keyframes welcomePulse {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow:
+      0 0 12px rgba(100, 190, 255, 0.35),
+      0 0 35px rgba(40, 130, 255, 0.2);
+  }
+
+  50% {
+    transform: translateY(-3px);
+    text-shadow:
+      0 0 18px rgba(100, 210, 255, 0.5),
+      0 0 45px rgba(40, 130, 255, 0.28);
+  }
+}
+
+.welcome-text {
+  animation: textReveal 1.4s ease both;
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
