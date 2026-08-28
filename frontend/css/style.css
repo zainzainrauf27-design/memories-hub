@@ -299,3 +299,44 @@ body {
   position: relative;
   z-index: 3;
 }
+
+.welcome-subtitle {
+  margin-top: 14px;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.heart-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.heart-divider span {
+  font-size: 22px;
+  opacity: 0.8;
+  animation: heartGlow 3s ease-in-out infinite;
+}
+
+.welcome-description {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.65;
+}
+
+@keyframes heartGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
