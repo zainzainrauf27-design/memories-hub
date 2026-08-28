@@ -272,3 +272,30 @@ body {
     transform: translate(-20px, -80px) scale(0.94);
   }
 }
+
+.welcome-content::after {
+  animation: glassShine 8s ease-in-out infinite;
+}
+
+@keyframes glassShine {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translate(-35px, 25px);
+    opacity: 0.6;
+  }
+}
+
+.welcome-content::before {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-content h1,
+.welcome-content p {
+  position: relative;
+  z-index: 3;
+}
