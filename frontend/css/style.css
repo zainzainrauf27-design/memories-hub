@@ -395,3 +395,40 @@ body {
   line-height: 2;
   opacity: 0.78;
 }
+
+@media (max-width: 600px) {
+  .daily-message {
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .daily-message-content {
+    padding: 32px 18px;
+    border-radius: 22px;
+  }
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .daily-message-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .message-english {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .message-divider {
+    margin: 18px 0;
+    font-size: 20px;
+  }
+
+  .message-urdu {
+    font-size: 17px;
+    line-height: 2;
+  }
+}
