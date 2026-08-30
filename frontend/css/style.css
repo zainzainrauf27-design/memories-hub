@@ -154,3 +154,38 @@ button:focus-visible {
   position: relative;
   z-index: 2;
 }
+.welcome-label {
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.welcome-subtitle {
+  margin-top: 14px;
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.welcome-content h1 {
+  margin-top: 18px;
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-shadow:
+    0 0 12px rgba(100, 190, 255, 0.35),
+    0 0 35px rgba(40, 130, 255, 0.2);
+  animation: welcomePulse 5s ease-in-out infinite;
+}
+
+.welcome-text {
+  max-width: 520px;
+  margin: 24px auto 0;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.7;
+  opacity: 0.75;
+  animation: textReveal 1.4s ease both;
+}
