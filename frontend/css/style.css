@@ -450,3 +450,72 @@ button:focus-visible {
     line-height: 1.6;
   }
 }
+@media (max-width: 600px) {
+  .daily-message {
+    padding: 6px 0;
+  }
+
+  .daily-message-content {
+    padding: 32px 18px;
+    border-radius: 22px;
+  }
+
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .daily-message-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .message-english {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .message-divider {
+    margin: 18px 0;
+    font-size: 20px;
+  }
+
+  .message-urdu {
+    font-size: 17px;
+    line-height: 2;
+  }
+
+  .home-actions {
+    gap: 9px;
+    padding: 6px 0;
+  }
+
+  .home-action {
+    flex: 1 1 140px;
+    min-height: 46px;
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
+  .bottom-nav {
+    bottom: 10px;
+    width: calc(100% - 20px);
+    min-height: 64px;
+    padding: 6px;
+    border-radius: 20px;
+  }
+
+  .nav-item {
+    min-height: 50px;
+    padding: 7px 3px;
+    border-radius: 14px;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .nav-item span:last-child {
+    font-size: 10px;
+  }
+}
