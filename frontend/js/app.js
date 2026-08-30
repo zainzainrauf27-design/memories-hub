@@ -76,3 +76,34 @@ function handleNavigation(event) {
 }
 
 console.log("Navigation functions ready");
+navItems.forEach((item) => {
+  item.addEventListener("click", handleNavigation);
+});
+
+homeActions.forEach((button) => {
+  button.addEventListener("click", () => {
+    const buttonText = button.textContent.trim();
+
+    if (buttonText.includes("My Memories")) {
+      showNotification("My Memories will be available soon");
+      return;
+    }
+
+    if (buttonText.includes("Create Memory")) {
+      showNotification("Create Memory will be available soon");
+      return;
+    }
+
+    if (buttonText.includes("Explore")) {
+      showNotification("Explore will be available soon");
+      return;
+    }
+
+    showNotification("This feature will be available soon");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  updatePageState("home");
+  console.log("Memories Hub is ready");
+});
