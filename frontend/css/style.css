@@ -413,3 +413,40 @@ button:focus-visible {
 .nav-item:active {
   transform: scale(0.96);
 }
+@media (max-width: 600px) {
+  #home-screen {
+    min-height: 100svh;
+    padding: 24px 14px 105px;
+  }
+
+  .home-content {
+    min-height: auto;
+    gap: 14px;
+  }
+
+  .welcome-content {
+    padding: 32px 18px;
+    border-radius: 22px;
+  }
+
+  .welcome-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .welcome-subtitle {
+    font-size: 18px;
+  }
+
+  .welcome-content h1 {
+    margin-top: 16px;
+    font-size: clamp(38px, 12vw, 58px);
+    letter-spacing: -1px;
+  }
+
+  .welcome-text {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
