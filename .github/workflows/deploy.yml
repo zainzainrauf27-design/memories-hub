@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,6 +17,8 @@ concurrency:
 
 jobs:
   deploy:
+    name: Build and Deploy Memories Hub
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,14 +29,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: Verify frontend
+        run: |
+          echo "Checking frontend..."
+          test -f frontend/index.html
+          test -f frontend/css/style.css
+          test -f frontend/js/app.js
+          echo "Frontend files found:"
+          find frontend -maxdepth 2 -type f
+
+      - name: Prepare website
+        run: |
+          mkdir -p _site
+          cp -r frontend/. _site/
+          echo "Website files:"
+          find _site -maxdepth 2 -type f
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload frontend
+      - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./frontend
+          path: ./_site
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
